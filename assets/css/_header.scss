@@ -1,0 +1,63 @@
+.bg-first{
+    background-image: url(/assets/img/bg-neymar.png);
+    height: 100vh;
+    .control-width{
+        position: relative;
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4.6875rem;
+            padding:3rem 1rem;
+            .logo{
+                img{
+                    width: 4rem;
+                    height: auto;
+                }
+            }
+          .nav{
+            display: flex;
+            align-items: center;
+            .menu{
+               a{
+                color: white;
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+                font-weight: 500;
+               }
+            }
+         }  
+         .buttons-header{
+            gap: 3.188rem;
+            .button-enter{
+                background-color: transparent;
+            }
+         }
+        }
+        .title-header{
+            position: absolute;
+            top: 50vh;
+            padding-left: 1rem;
+            color: $white;
+            .title-hero{
+              font-style: italic;
+              font-size: 6.25rem;
+              font-weight: 700; 
+              line-height: 5.875rem ;
+    
+              margin-bottom: 1.125rem;
+            }
+            .message-hero{
+                max-width: 477px;
+                font-style: italic;
+                font-size: 1.5rem;
+                font-weight: 500; 
+                line-height: 2.125rem ;
+    
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
+
+

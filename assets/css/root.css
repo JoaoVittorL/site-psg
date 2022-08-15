@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  color: hsl(0deg, 0%, 100%);
+  text-decoration: none;
+}
+
+.bg-first,
+.welcome-bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.control-width {
+  max-width: 1440px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.button-default {
+  border: none;
+  border-radius: 0.25;
+  background-color: hsl(355deg, 71%, 50%);
+  padding: 0.75rem 1.375rem;
+  text-transform: uppercase;
+  font-size: 1.125;
+  font-weight: 600;
+  line-height: 1.313;
+}
+
+.sub-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.375rem;
+  margin-bottom: 1.5rem;
+}
+.sub-title .pallet-title {
+  background-color: hsl(355deg, 71%, 50%);
+  width: 0.1875rem;
+  height: 1.25rem;
+}
+
+.bg-first {
+  background-image: url(/assets/img/bg-neymar.png);
+  height: 100vh;
+}
+.bg-first .control-width {
+  position: relative;
+}
+.bg-first .control-width .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.6875rem;
+  padding: 3rem 1rem;
+}
+.bg-first .control-width .header .logo img {
+  width: 4rem;
+  height: auto;
+}
+.bg-first .control-width .header .nav {
+  display: flex;
+  align-items: center;
+}
+.bg-first .control-width .header .nav .menu a {
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+.bg-first .control-width .header .buttons-header {
+  gap: 3.188rem;
+}
+.bg-first .control-width .header .buttons-header .button-enter {
+  background-color: transparent;
+}
+.bg-first .control-width .title-header {
+  position: absolute;
+  top: 50vh;
+  padding-left: 1rem;
+  color: hsl(0deg, 0%, 100%);
+}
+.bg-first .control-width .title-header .title-hero {
+  font-style: italic;
+  font-size: 6.25rem;
+  font-weight: 700;
+  line-height: 5.875rem;
+  margin-bottom: 1.125rem;
+}
+.bg-first .control-width .title-header .message-hero {
+  max-width: 477px;
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.125rem;
+  margin-bottom: 3rem;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.menu a {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.btn-menu {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .buttons-header {
+    display: none;
+  }
+  .header {
+    background: hsl(215deg, 50%, 9%);
+  }
+  .menu {
+    display: block;
+    position: absolute;
+    top: 4.6875rem;
+    left: 0;
+    background: hsl(215deg, 50%, 9%);
+    text-align: center;
+    width: 100%;
+    height: 0;
+    z-index: 1;
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  .menu a {
+    padding: 1rem 0;
+    margin-inline: 1rem;
+    border-bottom: 0.0625rem solid hsl(0deg, 0%, 100%);
+    border-radius: 0;
+  }
+  .btn-menu {
+    background: none;
+    border: none;
+    font: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: hsl(0deg, 0%, 100%);
+    padding: 1rem 0;
+    cursor: pointer;
+  }
+  .hamburger {
+    border-top: 0.125rem solid;
+    width: 1.25rem;
+  }
+  .hamburger::after,
+.hamburger::before {
+    content: " ";
+    display: block;
+    width: 1.25rem;
+    height: 0.125rem;
+    background: currentColor;
+    margin-top: 0.3125rem;
+    position: relative;
+    transition: 0.3s;
+  }
+  .nav.active .menu {
+    height: calc(100vh - 4.6875rem);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  .nav.active .hamburger {
+    border-top-color: transparent;
+  }
+  .nav.active .hamburger::before {
+    transform: rotate(135deg);
+  }
+  .nav.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -0.4375rem;
+  }
+}
+@media (max-width: 800px) {
+  .control-width {
+    position: relative;
+  }
+  .control-width .title-header {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    display: block;
+    max-width: 477px;
+    width: 100%;
+  }
+  .control-width .title-header a {
+    display: block;
+    width: 100%;
+  }
+}
+.main .result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.125rem;
+  margin-block: 7.813rem;
+}
+.main .result .logo-teams img {
+  width: 5rem;
+}
+.main .result .name-teams {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.375;
+}
+.main .result .number-result {
+  font-size: 3.875rem;
+  font-weight: 600;
+  line-height: 4.688rem;
+}
+.main .welcome-bg {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background-image: url(/assets/img/bg-welcome.png);
+  background-attachment: fixed;
+}
+.main .welcome-bg .message-welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1020px;
+  width: 100%;
+  height: auto;
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 2.5rem;
+}
+.main .welcome-bg .message-welcome .welcome-coment {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.875rem;
+}
+.main .welcome-bg .message-welcome .details {
+  margin-block: 1.125rem;
+  transition: 0.3s;
+}
+.main .welcome-bg .message-welcome .details summary {
+  color: hsl(355deg, 71%, 50%);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3125rem;
+}
+.main .notices {
+  width: 100%;
+  margin-block: 7.8125rem;
+}
+.main .notices .group-notices {
+  margin-block: 3.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.main .notices .group-notices .notice-card img {
+  width: 100%;
+}
+.main .notices .group-notices .notice-card .group-info {
+  margin-block: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .notices .group-notices .notice-card .group-info .page-notice {
+  color: hsl(355deg, 71%, 50%);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.main .notices .group-notices .notice-card .group-info .date {
+  color: hsl(0deg, 0%, 32%);
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+.main .notices .group-notices .notice-card .coment-notice {
+  color: hsl(215deg, 50%, 9%);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+.footer {
+  padding-block: 3.5rem;
+  color: white;
+  background-color: hsl(215deg, 50%, 9%);
+}
+.footer .footer-links {
+  display: flex;
+  gap: 12.5rem;
+}
+.footer .footer-links .links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  list-style-type: none;
+}
+.footer .footer-links .links .title.links {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.875rem;
+}
+.footer .footer-links .links li {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  gap: 1.4375rem;
+}/*# sourceMappingURL=root.css.map */

@@ -1,0 +1,65 @@
+$red: hsl(355, 71%, 50%);
+$gray: hsl(0, 0%, 32%);
+$dark: hsl(215, 50%, 9%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+a {
+  color: $white;
+  text-decoration: none;
+}
+.bg-first,
+.welcome-bg{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.control-width{
+  max-width: 1440px;
+  width: 100%;
+  margin-inline: auto;
+}
+.button-default {
+   border: none;
+   border-radius: 0.25;
+   background-color: $red;
+   padding:0.75rem 1.375rem ;
+
+   text-transform: uppercase;
+   font-size: 1.125;
+   font-weight: 600;
+   line-height: 1.313;
+}
+.sub-title{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.375rem;
+
+  margin-bottom: 1.5rem;
+  .pallet-title{
+       background-color: $red;
+       width: .1875rem; 
+       height: 1.25rem;
+  }
+}
+
+@import "header";
+@import "menu";
+@import "query";
+@import "main";
+@import "footer";

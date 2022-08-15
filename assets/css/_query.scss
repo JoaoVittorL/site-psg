@@ -1,0 +1,22 @@
+@media(max-width: 800px){
+    .control-width{
+        position: relative;
+        .title-header{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            text-align: center;
+            display: block;
+            max-width: 477px;
+            width: 100%;
+
+            a{
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    
+}
+@media(max-width: 600px){
+}
